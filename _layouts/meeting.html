@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% if page._styles %}
+<style type="text/css">
+  {{ page._styles }}
+</style>
+{% endif %}
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+	<h5>{{ page.description }}</h1>
+  </header>
+
+  <div class = "post-content">
+	<table class="center">
+		<colgroup>
+		<col width="25%" />
+		<col width="50%" />
+		<col width="15%" />
+		<col width="10%" />
+		</colgroup>
+		<thead>
+		<tr class="header">
+		<th>Date</th>
+		<th>Title</th>
+		<th>Speaker</th>
+		<th>Other Links</th>
+		</tr>
+		</thead>
+		<tbody>
+			{% assign sorted = site.meetings | sort: 'date' | reverse %}
+			{% for meeting_item in sorted %}
+			<tr>
+				<td>{{ meeting_item.date | date: "%e %B, %Y %H:%M" }}</td>
+				{% if meeting_item.paper_link %}
+					<td><a href="{{ meeting_item.paper_link }}" target="_blank">{{ meeting_item.title }}</a></td>
+		        {% else %}
+					<td>{{ meeting_item.title}}</td>
+				{% endif %}	
+				<td>{{ meeting_item.speaker }}</td>
+				<td>{{ meeting_item.links }}</td>
+			</tr>
+			{% endfor %} 
+
+		</tbody>
+	</table>
+  </div>
+
+</div>
