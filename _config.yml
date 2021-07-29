@@ -80,7 +80,10 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 collections:
   meetings:
     output: true
-    sort_by: date
+
+  semesters:
+    output: true
+
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
