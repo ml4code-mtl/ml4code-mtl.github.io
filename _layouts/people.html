@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">
+     {% if site.title == "blank" %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{% else %}{{ site.title }}{% endif %}
+    </h1>
+     <h1 class="desc">{{ page.description }}</h1>
+  </header>
+
+  </tr>
+
+  <article>
+    <div class="researchers clearfix">
+        {% for researcher in site.people %}
+        <div class="researcher-profile">
+            <img src="{{ researcher.image | prepend: '/assets/img/' | relative_url }}"/>
+            <ul class="researcher-info">
+                <li><span><a href="{{ researcher.website }}" target="_blank">{{ researcher.name }}</a></span></li>
+                <li>{{ researcher.affiliation }}</li>
+                <li><a href="mailto:{{ researcher.email | encode_email }}" target="_blank">{{ researcher.email }}</a></li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+  </article>
+
+</div>

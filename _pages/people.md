@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: people
 permalink: /people/
 title: People
 description: Researchers
