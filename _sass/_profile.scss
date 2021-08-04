@@ -36,8 +36,8 @@
         border-radius: 8px;
         float: center;
         object-fit: cover;
-        height: 120px;
-        width: 120px;
+        height: 130px;
+        width: 130px;
         margin-bottom: 5px;
     }
 
@@ -47,10 +47,7 @@
         text-align: center;
         list-style-type: none;
         padding-left: 0;
-        width: 65%;
-        width: -webkit-calc(100% - 130px);
-        width: calc(100% - 130px);
-        min-width: 130px;
+        width: 130px;
 
         a {
             color: $purple-color;
@@ -65,10 +62,6 @@
     }
 }
 
-.researcher-profile-three-col {
-    @extend .researcher-profile;
-    width: 33%;
-}
 
 
 .news {
