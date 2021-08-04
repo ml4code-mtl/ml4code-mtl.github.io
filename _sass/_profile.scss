@@ -65,6 +65,11 @@
     }
 }
 
+.researcher-profile-three-col {
+    @extend .researcher-profile;
+    width: 33%;
+}
+
 
 .news {
     border-top: 1px solid $grey-color-light;
