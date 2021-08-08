@@ -48,8 +48,13 @@ layout: default
 								<td>{{ meeting_item.title}}</td>
 							{% endif %}	
 							<td>{{ meeting_item.speaker }}</td>
-							<td>{{ meeting_item.links }}</td>
-						</tr>	
+							{% if meeting_item.slides%}
+								<td><a href="{{ meeting_item.slides }}" target="_blank">slides</a></td>
+							{% else %}
+								<td>{{ meeting_item.links }}</td>
+							{% endif %}
+
+						</tr>
 						{% endif %}
 					{% endfor %} 	
 
