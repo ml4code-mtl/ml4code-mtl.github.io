@@ -13,19 +13,17 @@ layout: default
 
   </tr>
 
-  <article>
-    <div class="researchers clearfix">
-        {% for researcher in site.people %}
-        <div class="researcher-profile">
-            <img src="{{ researcher.image | prepend: '/assets/img/' | relative_url }}"/>
-            <ul class="researcher-info">
-                <li><span><a href="{{ researcher.website }}" target="_blank">{{ researcher.name }}</a></span></li>
-                <li>{{ researcher.affiliation }}</li>
-                <li><a href="mailto:{{ researcher.email | encode_email }}" target="_blank">{{ researcher.email }}</a></li>
-            </ul>
-        </div>
-        {% endfor %}
-    </div>
-  </article>
+  
+  {% for researcher in site.people %}
+  <div class="researcher-profile">
+      <img src="{{ researcher.image | prepend: '/assets/img/' | relative_url }}"/>
+      <ul class="researcher-info">
+          <li><span><a href="{{ researcher.website }}" target="_blank">{{ researcher.name }}</a></span></li>
+          <li>{{ researcher.affiliation }}</li>
+          <li><a href="mailto:{{ researcher.email | encode_email }}" target="_blank">{{ researcher.email }}</a></li>
+      </ul>
+  </div>
+  {% endfor %}
+
 
 </div>
