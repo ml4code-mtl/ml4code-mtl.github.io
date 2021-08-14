@@ -128,6 +128,7 @@ plugins:
   - jekyll-twitter-plugin
   - jekyll-sitemap
   - jemoji
+  - jekyll-gzip # Added to compress the content
 
 # Extras
 github: [metadata]
@@ -163,8 +164,8 @@ scholar:
 
 enable_google_analytics:    false  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
-enable_mansory:             true   # enables automatic project cards arangement
-enable_math:                true   # enables math typesetting (uses MathJax)
+enable_mansory:             false   # enables automatic project cards arangement; unset to improve performance
+enable_math:                false   # enables math typesetting (uses MathJax); unset to improve performance
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            false   # enables switching between light/dark modes
@@ -208,3 +209,7 @@ popper:
 medium_zoom:
   version: "1.0.6"
   integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
+
+
+sass:
+  style: compressed
