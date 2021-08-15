@@ -1,13 +1,18 @@
 {% if site.enable_tooltips %}
 <!-- Enable Tooltips -->
 <script type="text/javascript">
-$(function () {$('[data-toggle="tooltip"]').tooltip()})
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
 </script>
-{% endif %}
-
-{% if site.enable_medium_zoom %}
+{% endif %} {% if site.enable_medium_zoom %}
 <!-- Medium Zoom JS -->
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@{{ site.medium_zoom.version }}/dist/medium-zoom.min.js" integrity="{{ site.medium_zoom.integrity }}" crossorigin="anonymous"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"
+  integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
+  crossorigin="anonymous"
+></script>
 <script src="{{ '/assets/js/zoom.js' | relative_url }}"></script>
 {% endif %}
 

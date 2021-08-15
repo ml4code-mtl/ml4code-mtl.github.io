@@ -1,18 +1,18 @@
+--- # -----------------------------------------------------------------------------
+
 # -----------------------------------------------------------------------------
 # Site settings
-# -----------------------------------------------------------------------------
-
 name: ML4Code @MTL
-email: 
+email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Machine Learning for Code Group at Montreal, Canada.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-url:  # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/
+url: # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
 last_updated: true # set to true if you want to display last updated in the footer
-impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -86,7 +86,7 @@ collections:
     output: true
 
   people:
-    output: true  
+    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -95,11 +95,11 @@ collections:
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
-highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme: github # https://github.com/jwarby/jekyll-pygments-themes (Note: 15th August 2020, avinashbhat - gitcdn takes a lot of time)
 kramdown:
   input: GFM
   syntax_highlighter_opts:
-    css_class: 'highlight'
+    css_class: "highlight"
     span:
       line_numbers: false
     block:
@@ -107,7 +107,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ['_pages']
+include: ["_pages"]
 exclude:
   - bin
   - Gemfile
@@ -138,7 +138,6 @@ github: [metadata]
 # -----------------------------------------------------------------------------
 
 scholar:
-
   last_name: Einstein
   first_name: [Albert, A.]
 
@@ -162,18 +161,21 @@ scholar:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    false  # enables google analytics
-enable_panelbear_analytics: false  # enables panelbear analytics
-enable_mansory:             false   # enables automatic project cards arangement; unset to improve performance
-enable_math:                false   # enables math typesetting (uses MathJax); unset to improve performance
-enable_tooltips:            false  # enables automatic tooltip links generated
-                                   # for each section titles on pages and posts
-enable_darkmode:            false   # enables switching between light/dark modes
-enable_navbar_social:       false  # enables displaying social links in the
-                                   # navbar on the about page
-enable_project_categories:  true   # enables categorization of projects into
-                                   # multiple categories
-enable_medium_zoom:         true   # enables image zoom feature (as on medium.com)
+enable_google_analytics: false # enables google analytics
+enable_panelbear_analytics: false # enables panelbear analytics
+enable_mansory: false # enables automatic project cards arangement; unset to improve performance
+enable_math: false # enables math typesetting (uses MathJax); unset to improve performance
+enable_tooltips:
+  false # enables automatic tooltip links generated
+  # for each section titles on pages and posts
+enable_darkmode: false # enables switching between light/dark modes
+enable_navbar_social:
+  false # enables displaying social links in the
+  # navbar on the about page
+enable_project_categories:
+  true # enables categorization of projects into
+  # multiple categories
+enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 
 # -----------------------------------------------------------------------------
 # Library versions
@@ -209,7 +211,6 @@ popper:
 medium_zoom:
   version: "1.0.6"
   integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
-
 
 sass:
   style: compressed
