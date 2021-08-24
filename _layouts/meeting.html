@@ -15,7 +15,7 @@ layout: default
 	<p><h5>{{ page.description }}</h1></p>
   </header>
 
-	{% assign sortedSemester = site.semesters | sort: 'seqeunce_id' | reverse %}
+	{% assign sortedSemester = site.semesters | sort: 'sequence_id' | reverse %}
 	{% for page in sortedSemester %}
 		<h4>{{ page.semester }}</h4>
 		<i>{{ page.schedule }}</i>
