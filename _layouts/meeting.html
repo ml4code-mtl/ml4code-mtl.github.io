@@ -18,7 +18,7 @@ layout: default
 	{% assign sortedSemester = site.semesters | sort: 'sequence_id' | reverse %}
 	{% for page in sortedSemester %}
 		<h4>{{ page.semester }}</h4>
-		<i>{{ page.schedule }}</i>
+		<i>{{ page.content }}</i>
 
   <div class = "post-content">
 	<table class="center" cellpadding = "3" STYLE="margin-top:10px;margin-bottom:20px;">
