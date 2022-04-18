@@ -1,6 +1,6 @@
 ---
 name: Shawn Tan
-affiliation: Université de Montréal, Mila
+affiliation: UdeM, Mila
 title: Graduate Student
 website: "https://wtf.sg/"
 image: shawn.webp
